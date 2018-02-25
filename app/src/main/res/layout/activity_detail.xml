@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.udacity.sandwichclub.DetailActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_vert_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dimen_16dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_vert_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dimen_16dp" />
+
+        <ImageView
+            android:id="@+id/iv_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/sandwich_picture_content_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tv_detail_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="@string/detail_name_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vert_start"
+            app:layout_constraintTop_toBottomOf="@+id/iv_detail_image" />
+
+        <TextView
+            android:id="@+id/tv_detail_name_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_detail_name_label"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_vert_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_detail_name_label"
+            tools:text="@tools:sample/lorem" />
+
+        <!-- Also known as -->
+        <TextView
+            android:id="@+id/tv_detail_also_known_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_also_known_as_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vert_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_name_content" />
+
+        <TextView
+            android:id="@+id/tv_detail_also_known_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_detail_also_known_label"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_vert_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_detail_also_known_label"
+            tools:text="@tools:sample/lorem" />
+
+        <!-- Place of origin -->
+        <TextView
+            android:id="@+id/tv_detail_place_of_origin_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_place_of_origin_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vert_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_also_known_content" />
+
+        <TextView
+            android:id="@+id/tv_detail_place_of_origin_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_detail_place_of_origin_label"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_vert_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_detail_place_of_origin_label"
+            tools:text="@tools:sample/lorem" />
+
+        <!-- Ingredients -->
+        <TextView
+            android:id="@+id/tv_detail_ingredients_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_ingredients_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vert_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_place_of_origin_content" />
+
+        <TextView
+            android:id="@+id/tv_detail_ingredients_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_detail_ingredients_label"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_vert_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_detail_ingredients_label"
+            tools:text="@tools:sample/lorem" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tv_detail_description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/detail_description_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vert_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_ingredients_content" />
+
+        <TextView
+            android:id="@+id/tv_detail_description_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_detail_description_label"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_vert_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_detail_description_label"
+            tools:text="@tools:sample/lorem/random" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
